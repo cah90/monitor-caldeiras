@@ -1,0 +1,157 @@
+* {
+ padding: 0;
+ margin: 0;
+ border: 0;
+ outline: none;
+ box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+div.wrapper {
+  width: 95%;
+  margin: 0 auto;
+}
+
+div.wrapper header img {
+  width: 100px;
+}
+
+/* CARDS */
+div.cards {
+  display: flex;
+}
+
+div.cards div.measuraments {
+  flex-grow: 4;
+  margin-right: 10px;
+  border: 1px solid #F2F2F2;
+}
+
+div.header {
+  padding: 8px;
+  background-color: #F2F2F2;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.header p {
+  background-color: #fff;
+  padding: 2px 16px;
+  border-radius: 4px;
+}
+
+div.record {
+  flex-grow: 1;
+  border: 1px solid #F2F2F2;
+}
+
+div.record-info {
+  display: flex;
+  padding: 16px;
+}
+
+div.record-month {
+  flex-grow: 1;
+}
+
+div.record-month p.meta {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.88rem;
+}
+
+div.record-info div.record-month select#months,
+div.record-info div.record-year select#years {
+  border: 1px solid black;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+div.record-info div.record-month,
+div.record-info div.record-year {
+  flex-grow: 1;
+}
+
+div.month-result div.result {
+  background-color: #f8c145;
+}
+
+div.year-result div.result {
+  background-color: #c2d59b;
+}
+
+div.month-result div.result,
+div.year-result div.result {
+  border-radius: 5px;
+  width: 90px;
+  padding: 16px;
+  margin: 20px auto 5px auto;
+}
+
+div.month-result div.result p,
+div.year-result div.result p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+div.month-result p,
+div.year-result p {
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+div.month-selector{
+  width: 150px;
+  margin: 0 auto;
+}
+
+div.year-selector {
+  width: 100px;
+  margin: 0 auto;
+}
+
+/* GAUGE CHARTS */
+div.graphs {
+  display: flex;
+}
+
+div.graph-container {
+  width: 25%;
+  
+}
+
+div.graph-container p.graph-label {
+  text-align: center;
+  padding: 8px;
+
+}
+
+div.graph-value {
+  text-align: center;
+  width: 100px;
+  margin: 10px auto 0;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #F2F2F2;
+}
+
+canvas#graph-oee,
+canvas#graph-availability,
+canvas#graph-performance,
+canvas#graph-quality {
+  width: 100%;
+}
+
+/* BAR CHART */
+div.monthly-record {
+  border: 1px solid #F2F2F2;
+  margin-top: 20px;
+}
+
+div.monthly-record div.graph {
+  width: 90%;
+}

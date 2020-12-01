@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dashboard ERB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script type="text/javascript" src="gauge.js"></script> <!--https://bernii.github.io/gauge.js/-->
+
+  </head>
+  <body>  
+    <div class="wrapper">
+      <header>
+        <img src="./images/erb-image2.jpg" alt="Logo">
+      </header>
+
+      <div class="cards">
+
+        <div class="measuraments">
+          <div class="header">
+            <h4>Gráficos</h4>
+            <p>Janeiro/2020</p>
+          </div>
+
+          <div class="graphs">
+            <div class="graph-container">
+              <p class="graph-label">OEE</p>
+              <canvas id="graph-oee"></canvas>
+              <div class="graph-value" id="oee"> 30% </div>
+            </div>
+
+            <div class="graph-container">
+              <p class="graph-label">Disponibilidade</p>
+              <canvas id="graph-availability"></canvas>
+              <div class="graph-value" id="availability"> 55% </div>
+
+            </div>
+
+            <div class="graph-container">
+              <p class="graph-label">Perfomance</p>
+              <canvas id="graph-performance"></canvas>
+              <div class="graph-value" id="performance"> 78% </div>
+
+            </div>
+
+            <div class="graph-container">
+              <p class="graph-label">Qualidade</p>
+              <canvas id="graph-quality"></canvas>
+              <div class="graph-value" id="quality"> 90% </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="record">
+          <div class="header">
+            <h4>Histórico</h4>
+          </div>
+
+          <div class="record-info">
+            <div class="record-month">
+              <div class="month-selector">
+                <label for="months">Mês</label>
+                <select id="months">
+                  <option value="1" selected>Janeiro</option>
+                  <option value="2">Fevereiro</option>
+                  <option value="3">Março</option>
+                  <option value="4">Abril</option>
+                  <option value="5">Maio</option>
+                  <option value="6">Junho</option>
+                  <option value="7">Julho</option>
+                  <option value="8">Agosto</option>
+                  <option value="9">Setembro</option>
+                  <option value="10">Outubro</option>
+                  <option value="11">Novembro</option>
+                  <option value="12">Dezembro</option>
+                </select>
+              </div> <!-- end of month-selector -->
+
+              <div class="month-result">
+                <div class="result">
+                  <p></p>
+                </div>
+
+                <p>Resultado Mensal</p>
+              </div>
+
+              <p class="meta">Meta: 80%</p>
+            </div> <!-- end of record-month -->
+
+            <div class="record-year">
+              <div class="year-selector">
+                <label for="years">Ano</label>
+                <select id="years">
+                  <option value="2019">2019</option>
+                  <option value="2020" selected>2020</option>
+                </select>
+              </div>
+
+              <div class="year-result">
+                <div class="result">
+                  <p></p>
+                </div>
+
+                <p>Resultado Anual</p>
+              </div>
+            </div>
+          </div> <!-- end of record-info -->
+
+        </div> <!-- end of record -->
+
+      </div> <!-- end of cards -->
+
+      <div class="monthly-record">
+        <div class="header">
+          <h4>OEE Diário - Mensal</h4>
+        </div>
+
+        <div class="graph">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+
+    
+    </div>  <!-- end of wrapper -->
+    <script type= module src="scripts.js"></script>
+    <script type=module src="graphs.js"></script>
+  </body>
+</html>
